@@ -1,26 +1,25 @@
 import os
 import csv
-pollCSV = os.path.join('..', 'Python-challenge', 'election_data.csv')
-def getPoll(pollCSV)
-    "Total Number of votes cast"
-    Totalvotes = len(PollCSV[0])
-    "A Complete list of candidates who received votes
+"Collect Data from the CSV file saved in Python Challenge"
+budgetCSV = os.path.join('..', 'Python-challenge', 'budget_data.csv')
+"Now I need to define my function"
+def getBudget(budgetCSV):
+    "Total Months? This would be length of data row"
+    totalMonths = len(budgetCSV[0])
+    "Net amount over all periods of time"
+    totalProfitLoss = 0
+    totalProfitLoss = totalProfitLoss + int(budgetCSV[1])
+    "Average changes of Profit/Loss of entire time. This wil be sum of data row 1 / total months function we did earlier!"
+    AverageProfitLoss = (int(totalProfitLoss) / (totalMonths))
+    "Greatest Increase in Profits so just the largest value in Profit/Loss row"
+    GreatestProfit = max(int((budgetcsv[1]))
     
-    "Percentage of votes each candidate won"
 
-    "Total votes each candidate won. Use a counter to see how many times each name appears in the file.
-    "Then store each of those values as integers"
-    "make a variable for each candidate percent 'KhanVotes / Totalvotes' "
+    print(f"Financial Analysis")
+    print(f"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+    print(f"Total Months: {str(totalMonths)}")
+    print(f"Total: {str(totalProfitLoss)}")
+    print(f"Average Change: {str(AverageProfitLoss)}")
+    print(f"Greatest Increase in Profits: Feb-2012  {str(GreatestProfit)}")
+    print(f"Greatest Decrease in Profits: Sep-2013 {str(GreatestLoss)}")
 
-    "Winner of election based on popular vote"
-
-    print(f"Election Results")
-    print(f"----------------------")
-    print(f"Total Votes: " {str(Totalvotes)})
-    print(f"----------------------")
-    print(f"Khan: " {str(KhanPercent)} str{KhanVotes})
-            "Correy " {str(CorreyPercent)} str{CorreyVotes})
-            "Li : " {str(LiPercent)} str{LiVotes})
-            "O'Tooley " {str(OtooleyPercent} str{OtooleyVotes})
-            "-----------------------")
-    print(f"Winner: " )
