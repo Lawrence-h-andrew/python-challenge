@@ -2,7 +2,7 @@ import os
 import csv
 "Collect Data from the CSV file saved in Python Challenge"
 csvpath = os.path.join('..', '..', 'budget_data.csv')
-with open(csvpath, 'r',) as csvfile:
+with open(csvpath, 'w',) as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ',')
 
     budgetCSV = [] 
@@ -12,7 +12,15 @@ with open(csvpath, 'r',) as csvfile:
 #"Now I need to define my function
 def getBudget(budgetCSV):
     "Total Months? This would be length of data row"
-    totalMonths = len(budgetCSV)
+    for row in csvreader:
+        totalMonths += 1
+        totalProfit += int(row[1])
+        if int(row[1]) >= GreatestProfit:
+            GreatestProfit = int(row[1])
+            GreatestProfitDate = row[0]
+        if int(row[1]) <= GreatestLoss:
+            GreatestLoss = int(row[1])
+            GreatestLossDate = row[0]
     "Net amount over all periods of time"
     totalProfit = 0
     totalProfit = totalProfit + int(budgetCSV[1])
@@ -21,7 +29,7 @@ def getBudget(budgetCSV):
     "Greatest Increase in Profits so just the largest value in Profit/Loss row"
     GreatestProfit = max(int((budgetcsv[1]))
 #   "Greatest Decrease in Profits"
-    GreatestLoss = min(int((budgetcsv[1]))
+    #GreatestLoss = min(int((budgetcsv[1]))
 
     print(f"Financial Analysis")
     print(f"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
@@ -31,4 +39,5 @@ def getBudget(budgetCSV):
     print(f"Greatest Increase in Profits: Feb-2012  {str(GreatestProfit)}")
     print(f"Greatest Decrease in Profits: Sep-2013 {str(GreatestLoss)}")
 
-"Now I have to convert the output printed to a text file..."""
+"Now I have to convert the output printed to a text file..."
+Textfile = open("getBudget.txt", "w+")
